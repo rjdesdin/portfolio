@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+:root {
+  --primary-color: #59a3fe;
+  --accent-1: #ff7b00;
+  --accent-2: #ff4646;
+  --text-gray: #c1c1c1;
+  --bg-dark: #101e2e;
+  --header-bg-dark: #071725;
+  --header-bg-dark-hover: #081e34;
+  --text-light: #f2f1f1;
+  --sp-xxs: .25rem;
+  --sp-xs: .5rem;
+  --sp-sm: 1rem;
+  --sp-sm-md: 1.5rem;
+  --sp-md: 2rem;
+  --sp-lg: 3rem;
+  --sp-xl: 5rem;
+  --trans-speed: 250ms;
+
+}
+
+body {
+  background-color: var(--bg-dark); 
+  margin: 0;
+}
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#socials nav {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sp-lg); 
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, var(--accent-1) 0%, var(--accent-2) 100%); 
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--sp-xxs);
+}
+
+#socials a {
+  font-family: 'Courier New', monospace;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: all var(--trans-speed) ease;
+}
+
+#socials a:hover {
+  color: var(--header-bg-dark);
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#profile-card:hover {
+  background-color: var(--header-bg-dark-hover);
+  box-shadow: 0 var(--sp-sm) var(--sp-md) rgba(0, 0, 0, 0.2); 
+}
+
+#profile-card {
+  background-color: var(--header-bg-dark);
+  font-size: var(--sp-sm-md);
+  margin: 0 auto;
+  padding: var(--sp-sm);
+  transition: all var(--trans-speed) ease;
+  color: var(--primary-color);
+  box-shadow: 0 var(--sp-xs) var(--sp-sm) rgba(0, 0, 0, 0.2); 
+}
+
+#profile-card h2 {
+  margin: 0 auto;
+  padding: var(--sp-sm) 0 var(--sp-sm) 0;
+}
+
+.pro-des {
+  color: var(--text-gray);
+  margin: 0;
+  font-size: var(--sp-sm-md);
+  font-style: italic;
+}
+
+.profile-img {
+  align-items: left;
+  width: 150px;
+  height: 150px;
+  object-fit: cover; 
+  border-radius: 50%; 
+  flex-shrink: 0;
+  border: var(--sp-xxs) solid var(--accent-1);
+}
+
+#front-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8%;
+  padding: var(--sp-xl) 0 0 0;
+  font-size: var(--sp-md);
+  color: var(--text-light);
+  max-width: 700px;
+}
+
+#front-title h1 {
+  margin: 0;
+}
+
+#your, #vision {
+  color: var(--primary-color);
+}
+
+#front-end-dev, #reality {
+  background: linear-gradient(to right, var(--accent-1) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width: 768px) {
+  
+     #profile-card {
+       padding: var(--sp-sm) 0 var(--sp-sm) 0;
+       font-size: var(--sp-sm);
+     }
+
+     #front-title {
+       margin: var(--sp-md) 0 0 8%;
+       padding: var(--sp-md) var(--sp-sm);
+       font-size: var(--sp-sm);
+     }
+
+     #socials nav {
+      gap: var(--sp-md); 
+      max-width: 90%; 
+    }
+
+    #socials a {
+      font-size: var(--sp-sm); 
+  }
+   }
