@@ -69,11 +69,11 @@ body {
 
 #profile-card {
   background-color: var(--header-bg-dark);
-  font-size: var(--sp-sm-md);
+  font-size: var(--sp-md);
   margin: 0 auto;
   padding: var(--sp-sm);
   transition: all var(--trans-speed) ease;
-  color: var(--primary-color);
+  color: var(--text-gray);
   box-shadow: 0 var(--sp-xs) var(--sp-sm) rgba(0, 0, 0, 0.2); 
 }
 
@@ -127,7 +127,7 @@ body {
   flex-shrink: 0;
 }
 
-img {
+.down-arrow {
   margin: 0;
   width: 150px;
   height: 150px;
@@ -159,23 +159,56 @@ img {
 
 @media (max-width: 768px) {
   
-     #profile-card {
-       padding: var(--sp-sm) 0 var(--sp-sm) 0;
-       font-size: var(--sp-sm);
-     }
+#profile-card {
+  padding: var(--sp-sm) 0 var(--sp-sm) 0;
+  font-size: var(--sp-sm);
+}
 
-     #front-title {
-       margin: var(--sp-md) 0 0 8%;
-       padding: var(--sp-md) var(--sp-sm);
-       font-size: var(--sp-sm);
-     }
+#hero {
+  margin: 0;
+  text-align: center;
+  max-width: 100%;
+  font-size: var(--sp-sm);
+}
 
-     #socials nav {
-      gap: var(--sp-md); 
-      max-width: 90%; 
-    }
+#front-title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-md) var(--sp-sm) 0 var(--sp-md);
+}
 
-    #socials a {
-      font-size: var(--sp-sm); 
-  }
-   }
+#socials nav {
+  gap: var(--sp-md); 
+  max-width: 100%; 
+}
+
+#socials a {
+  font-size: var(--sp-sm); 
+}
+
+.profile-img {
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.down-arrow {
+  margin: var(--sp-md 0 0 0);
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.pro-des {
+  margin: 0;
+  font-size: var(--sp-sm);
+  font-style: italic;
+}
+
+}
