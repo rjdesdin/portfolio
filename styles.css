@@ -73,7 +73,7 @@ body {
   margin: 0 auto;
   padding: var(--sp-sm);
   transition: all var(--trans-speed) ease;
-  color: var(--text-gray);
+  color: var(--text-light);
   box-shadow: 0 var(--sp-xs) var(--sp-sm) rgba(0, 0, 0, 0.2); 
 }
 
