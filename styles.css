@@ -74,6 +74,7 @@ body {
   color: var(--text-light);
   box-shadow: 0 var(--sp-xs) var(--sp-sm) rgba(0, 0, 0, 0.2); 
   width: 100%;
+  transition: all var(--trans-speed) ease;
 }
 
 .cursive {
