@@ -151,6 +151,10 @@ body {
 }
 
 @media (max-width: 1070px) {
+
+#front-title {
+  margin: 0 0 0 5%;
+}
   
 .pro-des {
   margin: 0;
@@ -168,10 +172,23 @@ body {
 .profile-img {
   align-items: center;
   width: auto;
-  height: 600px;
+  height: 500px;
   padding: 0;
   object-fit: cover;
   flex-shrink: 0;
+}
+#down-selector {
+  margin: var(--sp-md) 0 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.down-arrow {
+  margin: var(--sp-md 0 0 0);
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
 }
 
 }
@@ -179,7 +196,7 @@ body {
 @media (max-width: 768px) {
   
 #profile-card {
-  padding: var(--sp-xs) 0 var(--sp-xs) 0;
+  padding: 0 0 0 0;
   font-size: var(--sp-sm);
 }
 
