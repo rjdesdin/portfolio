@@ -4,11 +4,8 @@ const navLinks = document.querySelectorAll("#socials a");
 //For adding behavior when Socials Links are clicked
 navLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    console.log(`Clicked: ${this.textContent}`);
     if (link.textContent === "Github") {
-      console.log(`Clicked: Github`);
     } else {
-      console.log(`Clicked: PlaceHolder`);
       e.preventDefault();
     }
     navLinks.forEach(function (navLink) {
@@ -23,7 +20,22 @@ navLinks.forEach(function (link) {
 const theme =  document.querySelector("#theme-toggle")
 
 theme.addEventListener("click", function(e) {
-  console.log(`theme = ${theme}`)
-  console.log(`---THEME TOGGLE CLICKED---`);
   document.body.classList.toggle('light-mode');
+
+  const icon = theme.querySelector('img');
+
+  if (icon.src.includes('sun.png')) {
+    icon.src = './media/moon.png';
+  } else {
+    icon.src = './media/sun.png';
+  }
+});
+
+const aboutHidden = document.querySelector("#about-me")
+const aboutContent = document.querySelector("#about-section")
+
+aboutHidden.addEventListener("click", function(e) {
+  console.log(`clicked: ${aboutHidden}`);
+  e.preventDefault();
+  aboutContent.classList.toggle('hidden');
 });

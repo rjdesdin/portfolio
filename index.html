@@ -24,7 +24,7 @@
 
 <div id="socials">
 <nav>
-  <a href="placeholder about me">About Me</a>
+  <a id="about-me" href="placeholder about me">About Me</a>
   <a href="https://github.com/rjdesdin">Github</a>
   <a href="placeholder">Contact</a>
 </nav>
@@ -32,12 +32,22 @@
 
 </header>
 
+<div id="about-section" class="hidden">
+  <div class="about-content">
+    <h2><span class="prime-color">About </span><span class="accent-color">Me</span></h2>
+    <p>My name is Robert Jason Desdin, but I prefer to go by Jason. I've always worked in office settings, and in my HR position, the biggest thing I enjoyed was creating processes and forms—visually appealing documents. I always loved finding the most efficient way of working, whether it be through keyboard shortcuts or asking AI to create Python scripts. It was at that point that I found my love for coding!
+
+Although I've tried learning in the past, I never expected to actually get employed with this since I didn't have a degree. But recently, I've done a lot of research and discovered there are plenty of self-taught developers out there. So when January 2026 came by, I was determined: I'm going to be a frontend developer.
+
+Everything you see in this portfolio was coded by me with guidance through AI. AI never wrote the code for me—it told me what to create, and I coded it myself. I learned the languages through online videos and freeCodeCamp, but everything on this portfolio and in my projects is 100% me. The fact that I made it to where I am in the little time I had to learn shows my commitment and determination to become an outstanding developer. Through my portfolio, created with HTML, CSS, and JS, and the projects I've created that also includes REACT and Python, I hope you see what I see. That I should be YOUR frontend dev.</p>
+  </div>
+</div>
 
 <div id="front-title">
   <div id="hero">
     <h1>WHY I SHOULD BE</h1>
-    <h1> <span id="your">YOUR </span><span id="front-end-dev">FRONTEND DEV</span> </h1>
-    <p class="pro-des">Your <span id="vision">Vision</span>, is my <span id="reality"> Reality.</span></p>
+    <h1> <span class="prime-color">YOUR </span><span id="front-end-dev">FRONTEND DEV</span> </h1>
+    <p class="pro-des">Your <span class="prime-color">Vision</span>, is my <span class="accent-color"> Reality.</span></p>
  
     <div id="down-selector">
     <div id="down-img-container"> <img class="down-arrow" src="./media/down.gif" alt="Scroll down"></div>
@@ -57,6 +67,13 @@
       <p class="p1-des">This weather app is my second project, portfolio being the first to show HTML, CSS and JS, but in this app I hope to show off my skills with JS when it comes to DOM Manipulations, fetching API & promises, ES6+ modern syntax and more!</p>
     </div>
 
+  </section>
+
+  <section id="message-board">
+    <h2>what do <span class="prime-color">you </span><span class="accent-color">think?</span></h2>
+    <input type="text" id="message-input" placeholder="i think...">
+    <button id="add-message">Post</button>
+    <ul id="message-list"></ul>
   </section>
 
   <script src="script.js"></script>

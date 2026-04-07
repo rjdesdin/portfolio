@@ -41,6 +41,7 @@
   --sp-lg: 3rem;
   --sp-xl: 5rem;
   --sp-xxl: 10rem;
+  --sp-xxxl: 12rem;
   --trans-speed: 250ms;
 
 }
@@ -126,6 +127,45 @@ body {
   padding: 0 0 var(--sp-sm) 0;
 }
 
+#about-section {
+  max-height: 1000px;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+#about-section.hidden {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: var(--sp-xl);
+  color: var(--text-light);
+  font-size: var(--sp-md);
+}
+
+.about-content p {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: var(--sp-sm-md);
+  padding: 0 var(--sp-md) var(--sp-xl) 0;
+}
+
+.prime-color {
+  color: var(--primary-color);
+}
+
+.accent-color {
+  background: linear-gradient(to right, var(--accent-1) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .pro-des {
   color: var(--text-gray);
   margin: 0;
@@ -177,11 +217,7 @@ body {
   margin: 0;
 }
 
-#your, #vision {
-  color: var(--primary-color);
-}
-
-#front-end-dev, #reality {
+#front-end-dev, .accent-color {
   background: linear-gradient(to right, var(--accent-1) 0%, var(--accent-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -215,6 +251,99 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 8px;
+}
+
+#message-board {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--sp-md) 0 var(--sp-md) 5%;
+}
+
+#message-board h2 {
+  font-size: var(--sp-md);
+}
+
+#message-input {
+  width: 100%;
+  max-width: 95%;
+  background-color: var(--bg-dark);
+  border-color: var(--header-bg-dark) solid;
+  border-radius: var(--sp-md);
+  border-width: 0;
+  font-size: var(--sp-md);
+  margin: 1% 1% 1% 0;
+  transition: all var(--trans-speed) ease;
+}
+
+#message-input:hover::placeholder {
+  color: var(--text-light);
+}
+
+#message-input:focus {
+  background-color: var(--bg-dark);
+  border-color: var(--header-bg-dark) solid;
+  border-radius: var(--sp-md);
+  border-width: 0;
+  font-size: var(--sp-md);
+  margin: 1% 1% 1% 0;
+  padding: 0 0 0 2%;
+  outline: none;
+  color: var(--accent-2);
+}
+
+#message-input::placeholder {
+  color: var(--text-gray);
+  transition: all var(--trans-speed) ease;
+}
+
+#message-input:focus::placeholder {
+  color: var(--accent-1);
+}
+
+#add-message {
+  font-size: var(--sp-sm-md);
+  margin: var(--sp-sm) 0 var(--sp-sm) 0;
+  padding: var(--sp-sm);
+  background-color: var(--bg-dark);
+  border: 2px solid;
+  border-color: var(--header-bg-dark) solid;
+  border-radius: var(--sp-md);
+  color: var(--text-light);
+  transition: all var(--trans-speed) ease;
+}
+
+#add-message:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+#message-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+#message-list li {
+  background: var(--bg-dark);
+  padding: 1rem;
+  margin: 0.5rem auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: var(--accent-2);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 @media (max-width: 1070px) {
