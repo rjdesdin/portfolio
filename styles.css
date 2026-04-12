@@ -281,6 +281,7 @@ body {
 
 #message-input:hover::placeholder {
   color: var(--text-light);
+  padding: 0;
 }
 
 #message-input:focus {
